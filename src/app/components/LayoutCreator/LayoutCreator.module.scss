@@ -1,0 +1,119 @@
+.layoutcreatorContainer {
+    position: relative;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  height: 42rem;
+  margin: 4rem 0;
+  z-index: 2;
+
+  .configuration {
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(16, 16, 16); 
+    // border: 1px solid blue;
+    box-shadow: 2px 2px 8px 2px #cafb6278;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // background-color: rgba(108, 62, 62, 0.308);
+    // background-color: rgba(25, 15, 15, 0.46);
+
+    form {
+      padding: 2rem;
+
+      label {
+        margin: 1rem;
+        color: var(--neutral-white);
+      }
+
+      input {
+        width: 100%;
+        display: block;
+        margin: 0.6rem 0;
+        background-color: rgba(16, 15, 15, 0.992);
+        color: var(--neutral-white);
+        padding: 1.2rem 1.5rem;
+        border: none;
+        border-radius: 19px;
+        border: 1px solid  rgba(117, 112, 112, 0.992);
+
+        &:focus {
+          border: 1px solid rgba(162, 144, 144, 0.992);
+          outline: none;
+        }
+      }
+
+      input[type="submit"] {
+        background-color: rgba(16, 15, 15, 0.992);
+        font-size: 1.6rem;
+      }
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+      }
+
+      select {
+        display: block;
+        width: 100%;
+        margin: 0.6rem 0 3rem 0;
+        background-color: rgba(16, 15, 15, 0.992);
+        color: var(--neutral-white);
+        padding: 1.2rem 1.5rem;
+        border: none;
+        border-radius: 19px;
+        border: 1px solid  rgba(117, 112, 112, 0.992);
+
+        &:focus {
+            border: 1px solid rgba(162, 144, 144, 0.992);
+            outline: none;
+          }
+      }
+      option {
+        display: block;
+      }
+    }
+  }
+  .preview {
+    position: relative;
+    border-radius: 20px;
+    width: 50%;
+    height: 100%;
+    // border: 1px solid yellow;
+    // box-shadow: -4px 4px 8px 5px rgba(0, 0, 0, 0.211);
+    overflow: hidden;
+    // box-shadow: 2px 2px 8px 2px #cafb6278;
+
+    img {
+        background-color: rgba(0, 0, 0, 0.24);
+      object-fit: contain;
+      
+      width: 100%;
+      height: 100%;
+    }
+
+    .bgStars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      opacity: 0.1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
