@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/made-bon-voyage');
+@import url('https://db.onlinewebfonts.com/c/67049f541f49a3634b4ecdd6a71ad468?family=Tiempos+Text+Regular+Italic');
+@import url('https://fonts.cdnfonts.com/css/new-york');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-inter: "Inter", sans-serif;
+  --font-voyage: "MADE Bon Voyage", sans-serif;
+  --font-tiempos: "Test Tiempos Fine", sans-serif;
+  --font-newyork: "New York", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --black: #000;
+  --white: #fff;
+}
+
+.App {
+  overflow: hidden;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.Navbar-Desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align:middle;
+  padding: 0 2rem;
+}
+
+.Navbar-Desktop .Navbar__Logo {
+  color: var(--black);
+  opacity: 0.8;
+  font-family: var(--font-inter);
+  font-size: 18px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.Navbar-Desktop .Navbar__Logo span {
+  font-weight: 500;
+}
+
+.Navbar-Desktop .Navbar__List {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Navbar-Desktop .Navbar__List ul{
+  display: flex;
+  gap:3.438rem;
+  list-style: none;
+
+  color: var(--black);
+  opacity: 0.6;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.Navbar-Desktop .Navbar__List li {
+  cursor: pointer;
+}
+
+.Navbar-Desktop .Navbar__ContactUs button {
+  width: 7.2rem;
+  height: 2.2rem;
+  border-radius: 40px;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+}
+
+.Navbar-Mobile {
+  display: none;
+}
+
+.Main_Area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  gap: 1.5rem;
+}
+
+.SideImage {
+  width: 55%;
+  height: 800px;
+  border-radius: 30px;
+  background: url('../assets/homepageImages/furnitureBackground.png'), lightgray 50% / cover no-repeat;
+}
+
+.SideInfo {
+  width: 45%;
+  height: 800px;
+  border-radius: 30px;
+  background: #24272B;
+}
+
+.SideInfo__Wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3.15rem 2.5rem 2.5rem 2.5rem;
+}
+
+#Title-1, #Title-2, #Title-3 {
+  color: #FFF;
+  font-size: 55px;
+  text-transform: uppercase;
+  letter-spacing: 0.935px;
+}
+
+#Title-1 {
+  font-family: var(--font-newyork);
+  font-weight: 400;
+}
+
+#Title-2 {
+  font-family: var(--font-voyage);
+  font-weight: 400;
+}
+
+#Title-3 {
+  font-family: var(--font-tiempos);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.SideInfo__Subtitle {
+  color: var(--white);
+  opacity: 0.6;
+  font-family: var(--font-raleway);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  margin-top: 1.2rem;
+}
+
+.SideInfo__InputAreas {
+  margin-top: 6.3rem;
+}
+
+.SideInfo__InputAreas-Group {
+  width: 100%;
+  height: 80px;
+  border-radius: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.SideInfo__InputAreas-Group:not(:first-child)
+{
+  margin-top: 1rem;
+}
+
+.SideInfo__InputAreas-Group input {
+  margin-left: 1.5rem;
+  padding: 1.5rem 1rem 1.5rem 0.5rem;
+  display: block;
+  width: 80%;
+  border: none;
+  background: transparent;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.SideInfo__InputAreas-Group input:focus {
+  outline:none;
+}
+
+.SideInfo__InputAreas-Group:has(> input:valid){
+  border: 1px solid #A69893;
+}
+
+.SideInfo__InputAreas-Group label {
+  position: relative;
+  color: var(--white);
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  top: -3rem;
+  left: 2rem;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+.SideInfo__InputAreas-Group input:focus ~ label, input:valid ~ label {
+  font-size:14px;
+  color: #A69893;
+  font-weight: 500;
+  top: -4.5rem;
+}
+
+.SideInfo__InputAreas button {
+  display: inline-flex;
+  margin-top: 5%;
+  width: 100%;
+  height: 100%;
+  padding: 1.6rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 47px;
+  opacity: 0.3;
+  background: #A69893;
+  border: none;
+
+  color: #FFF;
+  font-family: var(--font-inter);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.06px;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 1440px) {
+  #Title-1, #Title-2, #Title-3 {
+    font-size: 50px;
+  }
+
+  .SideInfo__InputAreas {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+
+  #Title-1, #Title-2, #Title-3 {
+    font-size: 45px;
+  }
+
+  .SideInfo__InputAreas {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width:1024px){
+  #Title-1, #Title-2, #Title-3 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .SideInfo__InputAreas {
+    margin-top: 3rem;
+  }
+
+  .SideInfo__InputAreas-Group {
+    height: 70px;
+  }
+
+  .SideInfo__InputAreas-Group input {
+    padding: 1.4rem 1rem 1.4rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .Navbar-Desktop {
+    display: none;
+  }
+
+  .Navbar-Mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align:middle;
+    padding: 0 2rem;
+  }
+
+  .Navbar-Mobile .Navbar__Logo span {
+    font-weight: 500;
+  }
+
+  .Navbar-Mobile .Navbar__Logo {
+    color: var(--black);
+    opacity: 0.8;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-weight: 200;
+    cursor: pointer;
+  }
+
+  /* Responsive Menu => SetActive - True */
+  .Navbar-Mobile .Navbar__List-Hamburger-Button {
+    position: relative;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 3em;
+    height: 2em;
+    z-index: 100;
+    background-color: transparent;
+    background-image: url('../assets/homepageImages/burger-menu-open.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    -webkit-tap-highlight-color: transparent;
+
+    &.Open {
+      background-image: url('../assets/homepageImages/burger-menu-close.svg');
+    }
+  }
+
+  .Navbar-Mobile .Navbar__List-Hamburger-Panel {
+    max-width: 30%;
+    background-color: #24272b;
+    /*background-size: 117px 188px;*/
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
+    position: fixed;
+    z-index: 5;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    padding: 3em;
+  
+    &.Open {
+      visibility: visible;
+      width: 100%;
+      right: 0;
+      opacity: 1;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      padding-top: 12%;
+    }
+  }
+
+  .Navbar-Mobile .Navbar__List ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    gap:3rem;
+  }
+
+  .Navbar-Mobile .Navbar__List li {
+    cursor: pointer;
+  }
+
+  .Navbar-Mobile .Navbar__ContactUs button {
+    width: 7.2rem;
+    height: 2.2rem;
+    border-radius: 40px;
+    background: var(--white);
+    color: var(--black);
+    opacity: 0.7;
+    border: none;
+  }
+
+
+  .Main_Area {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  .SideImage {
+    width: 100%;
+  }
+
+  .SideInfo {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  
+  .SideInfo__InputAreas-Group {
+    height: 60px;
+  }
+
+  .SideInfo__InputAreas button {
+    height: 60px;
+  }
+
+  .SideInfo__InputAreas-Group input {
+    padding: 1.2rem 1rem 1.2rem 0.5rem;
+  }
+
+  .SideInfo__InputAreas-Group input:focus ~ label, input:valid ~ label {
+    font-size:12px;
+    top: -4rem;
+  }
+}
